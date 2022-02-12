@@ -1,6 +1,5 @@
 //Game vars
 var server = require("./libs/server");
-server.set('transports', ['websocket']);
 var color = require("./libs/color");
 
 //console.log(color.red, "Test Message");
