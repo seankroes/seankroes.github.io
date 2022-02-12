@@ -51,8 +51,8 @@ app.use('/OnlineGame',express.static(__dirname + '/OnlineGame'));
 
 app.enable('trust proxy');
 
-serv.listen(process.env.PORT || 3001);
-console.log("Chat server started on port 3001");
+serv.listen(process.env.PORT || 3333);
+console.log("Chat server started on port 3333");
 
 var SOCKET_LIST = {};
 
