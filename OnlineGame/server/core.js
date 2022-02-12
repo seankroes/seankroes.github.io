@@ -15,7 +15,7 @@ var serv = require('http').Server(app);
 
 //Game code
 
-server.init(80, "Game is running on port 80", color.green);
+server.init(3000, "Game is running on port 3000", color.green);
 
 
 server.on("playerMovement", function(data) {
