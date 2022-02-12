@@ -12,6 +12,7 @@ var express = require('express');
 var app = express();
 //var serv = express.Server(app);
 var serv = require('https').Server(app);
+serv.set('transports', ['websocket']);
 
 //Game code
 
