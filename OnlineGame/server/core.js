@@ -1,5 +1,6 @@
 //Game vars
 var server = require("./libs/server");
+server.set('transports', ['websocket']);
 var color = require("./libs/color");
 
 //console.log(color.red, "Test Message");
@@ -12,7 +13,6 @@ var express = require('express');
 var app = express();
 //var serv = express.Server(app);
 var serv = require('https').Server(app);
-serv.set('transports', ['websocket']);
 
 //Game code
 
