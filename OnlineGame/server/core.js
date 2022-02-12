@@ -11,7 +11,7 @@ var db = null;//mongojs('localhost:27017/myGame', ['account','progress']);
 var express = require('express');
 var app = express();
 //var serv = express.Server(app);
-var serv = require('https').Server(app);
+var serv = require('http').Server(app);
 
 //Game code
 
