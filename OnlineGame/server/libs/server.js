@@ -14,7 +14,7 @@
   var app = express();
   app.use(express.static('../public'));
 
-  var port = 80;
+  var port = 3000;
   var server;
   var io;
   var lst = [];
