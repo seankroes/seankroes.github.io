@@ -1,0 +1,92 @@
+a:visited {
+  color: #fff;
+}
+
+a:link {
+  color: #fff;
+}
+
+/* Container */
+
+.grid-container-box-title {
+  color: #fff;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Styles */
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.b-header {
+  color: #000;
+  background-color: #0064de;
+
+  /*Gradient*/
+  background: linear-gradient(-45deg, #51C9ED, #256fe4, #23a6d5, #0064de);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.b-header-right-form input, .b-header-right-form input::placeholder {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+.b-header-right-form-close {
+  color: #fff;
+}
+
+.b-banner {
+  color: #fff;
+  background-color: #3d3d3d;
+}
+
+.b-footer {
+  background-color: #0064de;
+  color: #fff;
+
+  /*Gradient*/
+  background: linear-gradient(-45deg, #51C9ED, #256fe4, #23a6d5, #0064de);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.b-nav,
+.b-ads {
+  color: #fff;
+  background: #3c3c3c;
+}
+
+.b-nav ul li:hover,
+.active {
+  background: #0064de;
+
+  /*Gradient*/
+  background: linear-gradient(-45deg, #51C9ED, #256fe4, #23a6d5, #0064de);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Checkbox */
+
+.slider {
+  background-color: #ccc;
+}
+
+.slider:before {
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: #ffa500;/*#2196F3;*/
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ffa500; /*#2196F3;*/
+}

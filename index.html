@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sean Kroes</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- <link href='fonts/Open-Sans.css' rel='stylesheet' type='text/css'>-->
+
+  <script src="js/jquery.min.js"></script>
+
+  <!--<script src="js/less.min.js"></script>-->
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="stylesheet" type="text/css" id="lightSwitchStyle" href="style-theme-dark.css">
+
+  <script src="js/LoginForm.js"></script>
+
+  <script src="js/Navigation.js"></script>
+
+  <script src="js/aes.js"></script>
+  <script src="js/md5.js"></script>
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script type="text/javascript" src="js/filter.js"></script>
+  <script type="text/javascript" src="js/emoji.js"></script>
+
+  <script>
+     function encrypt()
+   {
+    var pass=document.getElementById('psword').value;
+    if(pass=="")
+    {
+       //console.log("No password entered");
+       return false;
+    }
+    else
+    {
+       var hash = CryptoJS.MD5(pass);
+       document.getElementById('psword').value=hash;
+       localStorage.setItem("hashp", hash);
+      return true;
+    }
+  }
+</script>
+
+</head>
+<body class="b">
+
+  <header class="b-header">
+    <a class="b-header-left" href="#"">
+      
+      <!--DarkMode Switch-->
+      <label class="switch">
+      <input type="checkbox" id="lightSwitch" onclick="save();//location.reload();" onmousedown="save();//location.reload();"/>
+        <span class="slider"></span>
+      </label>
+      <!--Load DarkMode-->
+      <script src="js/DarkMode.js" id="lightSwitch"></script>
+
+    </a>
+    <div class="nav-link-header" data-id="1">
+    <a class="b-header-title" href="#">Sean Kroes</a>
+    </div>
+    <a class="b-header-right" href="#" onclick="ShowLoginForm();">Sign in</a>
+
+<form action="#" class="b-header-right-form">
+  <a class="b-header-right-form-close" onclick="HideLoginForm();">X</a>
+
+  <input type="text" name="uname" placeholder="username"><br>
+  <input type="password" name="pword" id="psword" placeholder="password"><br>
+  <input type="submit" value="login" onclick="return encrypt()">
+</form>
+</header>
+
+<div class="b-nav-wrapper">
+  <aside class="b-nav">
+    <ul>
+      <li class="nav-link active" data-id="1"><a>Home</a></li>
+      <li class="nav-link" data-id="2"><a>My CV</a></li>
+      <li class="nav-link" data-id="3"><a>Game</a></li>
+      <li class="nav-link" data-id="4"><a>Contact</a></li>
+    </ul>
+  </aside>
+</div>
+
+  <main class="b-main">
+    <div id="content">
+      <!-- content will be from page divs below -->
+      <div id="page1" class="page">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui..</p>
+
+        <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.</p>
+      </div>
+      <div id="page2" class="hide page">
+        <div>My CV:</div>
+      </div>
+      <div id="page3" class="hide page">
+        <div>
+          <div id="signDiv">
+  Username: <input id="signDiv-username" type="text" minlength="3" maxlength="14" autofocus required></input><br>
+  <!--Password: <input id="signDiv-password" type="password"></input>-->
+  <button id="signDiv-signIn">Play</button>
+  <!--<button type="submit" id="signDiv-signUp">Sign Up</button>-->
+</div>
+  
+  <div id="chat-wrapper" style="margin-top:0px;display:none;">  
+    <iframe scrolling="no" style="position:absolute; height: 72%; width: 89%; border: none; overflow: hidden;" src="OnlineGame/public/index.html"></iframe>
+    <div id="chat-text" style="position:absolute;margin:8px;width:500px;height:100px;overflow-y:scroll">
+      <div style="font-size:18px;">Online Multiplayer Test v0.1</div>
+      <div style="font-size:14px;">type /help for info</div>
+      <hr>
+        <div id="chat-output">
+          <!--chat text goes here-->
+        </div>
+    </div>
+
+    <form id="chat-form" style="position:absolute;margin:8px;top:40%;">
+      <input id="chat-input" type="text" autocomplete="off" style="width:140%;" autofocus></input>
+    </form>
+        </div>
+        <script src="js/socket.js"></script>
+<script>
+
+  // 
+  var WIDTH = 500;
+  var HEIGHT = 500;
+  //var socket = io();
+  var socket = io.connect('http://localhost:3001', {secure: true});
+  //var socket = io.connect({secure: true});
+  
+  //Elements
+  var signDiv = document.getElementById('signDiv');
+  var signDivUsername = document.getElementById('signDiv-username');
+  var signDivSignIn = document.getElementById('signDiv-signIn');
+  var signDivSignUp = document.getElementById('signDiv-signUp');
+  var signDivPassword = document.getElementById('signDiv-password');
+  
+  //Chat  
+  var chatWrapper = document.getElementById('chat-wrapper');
+  var chatText = document.getElementById('chat-text');
+  var chatInput = document.getElementById('chat-input');
+  var chatForm = document.getElementById('chat-form');
+  var chatMessage = document.getElementById('chat-message');
+  var chatOutput = document.getElementById('chat-output');
+  var chatEmoji = document.getElementById('chat-emoji');
+  var emoji = document.getElementById('emoji');
+  
+  
+  signDivSignIn.onclick = function(){
+    socket.emit('signIn',{username:signDivUsername.value,/*password:signDivPassword.value*/});
+  }
+  /*signDivSignUp.onclick = function(){
+    socket.emit('signUp',{username:signDivUsername.value,password:signDivPassword.value});
+  }*/
+  socket.on('signInResponse',function(data){
+    if(data.success){
+      signDiv.style.display = 'none';
+      chatWrapper.style.display = 'initial';
+    } else
+      alert("Sign in unsuccessful.");
+  });
+  socket.on('signUpResponse',function(data){
+    if(data.success){
+      alert("Sign up successful.");
+    } else
+      alert("Sign up unsuccessful.");
+  });
+
+  socket.on('addToChat',function(data){
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + data + '</div>';
+    //Set chat to bottom on message received
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  socket.on('sendCommandToServer',function(data,username){
+    //console.log(username);
+    //console.log(data);
+
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+  //Commands
+  //Retrieve server values
+
+  //Retreive from server Coin flip
+  socket.on('sendCoin',function(coinValue,username) {
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>flipped the coin and its... ' + coinValue + '</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  //Retreive from server Dice
+  socket.on('sendDice',function(diceValue,username) {
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>rolled the dice and its... ' + diceValue + '</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+
+  //Retreive from server user time
+  socket.on('sendTime',function(username) {
+    //get time
+    var time = new Date().toLocaleString();
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>its ' + time + '</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  //Retreive from server uptime
+  socket.on('sendUptime',function(uptime,username) {
+      //format uptime correctly.
+      function format(seconds){
+        function pad(s){
+          return (s < 10 ? '0' : '') + s;
+        }
+        var hours = Math.floor(seconds / (60*60));
+        var minutes = Math.floor(seconds % (60*60) / 60);
+        var seconds = Math.floor(seconds % 60);
+
+        return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+      }
+
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>the server has been up for ' + format(uptime) + ' minutes.</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  //Retreive from server Clear chat
+  socket.on('sendClear',function(username) {
+    chatOutput.innerHTML = "";
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>cleared the chat.</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  socket.on('sendHelp',function(username) {
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ": asked for <b>HELP</b>" + '</div>';
+    chatOutput.innerHTML += '<hr id="chat-message">';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><h3>User commands:</h3></p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><b>@name '+'message'+'</b> - send a private message to a user.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/time</b> - local time.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/uptime</b> - server uptime.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/flip /coin</b> - flip a coin.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/roll /dice</b> - roll the dice.</p> </div>';
+    chatOutput.innerHTML += '<hr id="chat-message">';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><h3>Admin commands:</h3></p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/clear /cls /empty</b> - clear the chat.</p> </div>';
+   /* chatOutput.innerHTML += '<div id="chat-message"> <p><b>!kick username</b> - kick a user from the chat session.</p> </div>';*/
+   /* chatOutput.innerHTML += '<div id="chat-message"> <p><b>/ban</b> - ban a user from the chat session.</p> </div>';*/
+    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/shutdown /exit /quit /q</b> - shutdown the server.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><h3>Movement controls:</h3></p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message"> <p><h3>Use the WSAD or arrow keys to move around.</h3></p> </div>';
+    chatOutput.innerHTML += '<hr id="chat-message">';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  //Retreive from server user kick
+  socket.on('sendKick',function(data,username) {
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>' + data.username + ' has been kicked from the chat session.</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  //Retreive from server user ban
+  socket.on('sendBan',function(username) {
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has been banned from the chat session.</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  //Retreive from server User joined
+  socket.on('sendConnect',function(username) {
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has joined the game.</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  //Retreive from server User left
+  socket.on('sendDisconnect',function(username) {
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has left the game.</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  //Retreive from server Shutdown
+  socket.on('sendShutdown',function(username) {
+    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>is shutting down the server.</b></div>';
+    chatText.scrollTop = chatText.scrollHeight;
+  });
+
+  //Submit
+  chatForm.onsubmit = function(e){
+    e.preventDefault();
+
+    //Prevent if input is empty
+    if (chatInput.value.length <= 0) {
+      //console.log('empty');
+    //Prevent if input contains spaces
+    } else if( !chatInput.value.trim().length ) {
+      chatInput.value = '';
+    } else {
+      //(profanity)Filter
+      //(linked in head)
+      if (!(filter.indexOf(chatInput.value.toLowerCase()) > -1)) {
+      //if is command
+      if(chatInput.value[0] === '/') {
+        socket.emit('sendCommandToServer',chatInput.value.slice(1));
+        chatInput.value = '';
+      //if is private message
+      } else if(chatInput.value[0] === '@') {
+        //@username,message
+        socket.emit('sendPmToServer',{
+          username:chatInput.value.slice(1,chatInput.value.indexOf(' ')),
+          message:chatInput.value.slice(chatInput.value.indexOf(' ') + 1)
+        });
+        chatInput.value = '';
+      
+      } else if(chatInput.value[0] === '!') {
+        socket.emit('sendKickToServer',{
+            username:chatInput.value.slice(1 + chatInput.value.indexOf(' ') + 1)
+        });
+        chatInput.value = '';
+
+      } else {
+          socket.emit('sendMsgToServer',chatInput.value);
+          chatInput.value = '';
+          } 
+      } else { //add stars to profanity
+
+      //filterMsg = chatInput.value.replace(filter,'****');
+      //console.log(filterMsg);        
+      socket.emit('sendMsgToServer',"****"/*filterMsg*/);
+      chatInput.value = ''; 
+      }
+    }
+  }
+  //Toggle emoji
+  /*var emojiToggle = "off";
+
+  function toggle_emoji() {
+    if(emojiToggle == "off"){
+      chatEmoji.style.display = 'initial';
+      emojiToggle = "on";
+    } else {
+      chatEmoji.style.display = 'none';
+      emojiToggle = "off";
+    }
+  }*/
+
+  
+  
+  //UI
+  document.oncontextmenu = function(event){
+    event.preventDefault();
+  }
+  
+</script>
+      </div>
+      <div id="page4" class="hide page">
+        <div>Contact me:</div>
+      </div>
+    </div>
+</div>
+
+  </main>
+
+  <!--<aside class="b-ads"><div class="b-ads-ad">Ads</div></aside>-->
+
+  <footer class="b-footer">Footer</footer>
+
+</body>
+</html>
