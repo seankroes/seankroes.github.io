@@ -1,7 +1,7 @@
 var client = {
   socket: null,
   init: function(link) {
-    client.socket = io.connect(link);
+    client.socket = io.connect(link, {secure: true, rejectUnauthorized: false});
 	client.socket.on("playerMovement", function(data) {
 
 		
