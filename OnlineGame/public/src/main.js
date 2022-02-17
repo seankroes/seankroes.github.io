@@ -5,7 +5,7 @@ function setup() {
   new imageSet("tilesets", "map", 8, 501);
   new rawMap("maps", "map");
   
-  client.init("//192.168.178.234:3000");
+  client.init("//77.250.48.49:3000");
   //new player(client.socket.id, true);
 }
 function step() {
