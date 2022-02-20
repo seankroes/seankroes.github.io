@@ -267,12 +267,15 @@
 
   //Retreive from server User joined
   socket.on('sendConnect',function(username) {
+    var uname = username;
+    localStorage.setItem("uname",uname);
     chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has joined the game.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
   //Retreive from server User left
   socket.on('sendDisconnect',function(username) {
+    localStorage.removeItem(uname);
     chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has left the game.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
