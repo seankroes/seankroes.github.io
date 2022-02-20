@@ -4,17 +4,18 @@ window.onload = function() {
 	requestAnimationFrame(draw);
 
 var previousFrameTime = 0;
-var name = "Username";
 
 function draw(time) {
 	var fps = Math.floor(1000 / (time - previousFrameTime));
 	previousFrameTime = time;
 	
-	ctx.fillStyle = "#000";
+	ctx.fillStyle = "#fff";
 	ctx.font = "normal 10pt sans-serif";
-	ctx.fillText("FPS: " + fps, 10, 20);
+	ctx.fillText("FPS: " + fps, 1048, 20);
 	//ctx.fillText("X: " + px + " Y: " + py, 10, 40);
-	ctx.fillText(name, 10, 80);
+	var uname=localStorage.getItem("uname");
+	var name = uname;
+	ctx.fillText(name, 20, 200);
 		
 	requestAnimationFrame(draw);
 	}
