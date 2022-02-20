@@ -25,11 +25,11 @@ class userMovement {
 	};
   }
   step() {
-	var xLoc = this.pos.x;
-    	localStorage.setItem("xLoc",xLoc);
-    	var yLoc = this.pos.y;
-    	localStorage.setItem("yLoc",yLoc);
-	  
+  	/*var xLoc = this.pos.x;
+    localStorage.setItem("xLoc",xLoc);
+    var yLoc = this.pos.y;
+    localStorage.setItem("yLoc",yLoc);*/
+
 	  if(keyIsDown(this.keys.W) && !this.moving || keyIsDown(this.keys.up) && !this.moving) {
 		  this.img.setY(3);
 		  this.moving = true;
