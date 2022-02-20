@@ -125,12 +125,12 @@
         <script src="js/socket.js"></script>
 <script>
 
-  // 
+  // Chat
   var WIDTH = 500;
   var HEIGHT = 500;
   //var socket = io();
-  //var socket = io.connect('http://localhost:3001', {secure: true});
-   var socket = io.connect('//77.250.48.49:3333', {secure: true, rejectUnauthorized: false});
+  var socket = io.connect('//77.250.48.49:3333', {secure: true, rejectUnauthorized: false});
+  //var socket = io.connect();
   //var socket = io.connect({secure: true});
   
   //Elements
@@ -267,15 +267,15 @@
 
   //Retreive from server User joined
   socket.on('sendConnect',function(username) {
-    var uname = username;
-    localStorage.setItem("uname",uname);
+    /*var uname = username;
+    localStorage.setItem("uname",uname);*/
     chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has joined the game.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
   //Retreive from server User left
   socket.on('sendDisconnect',function(username) {
-    localStorage.removeItem(uname);
+    //localStorage.removeItem(uname);
     chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has left the game.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
