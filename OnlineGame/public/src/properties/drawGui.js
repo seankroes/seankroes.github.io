@@ -13,11 +13,12 @@ function draw(time) {
 	ctx.font = "normal 10pt sans-serif";
 	ctx.fillText("FPS: " + fps, 1080, 20);
 	//ctx.fillText("X: " + px + " Y: " + py, 10, 40);
-	var uname=localStorage.getItem("uname");
+	/*var uname=localStorage.getItem("uname");
 	var name = uname;
 	var xLoc=localStorage.getItem("xLoc");
 	var yLoc=localStorage.getItem("yLoc");
-	ctx.fillText(name, xLoc, yLoc);
+	ctx.fillText(name, xLoc, yLoc);*/
+	//ctx.fillText("You", xLoc, yLoc);
 		
 	requestAnimationFrame(draw);
 	}
