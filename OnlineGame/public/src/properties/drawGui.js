@@ -11,7 +11,7 @@ function draw(time) {
 	
 	ctx.fillStyle = "#fff";
 	ctx.font = "normal 10pt sans-serif";
-	ctx.fillText("FPS: " + fps, 1048, 20);
+	ctx.fillText("FPS: " + fps, 1080, 20);
 	//ctx.fillText("X: " + px + " Y: " + py, 10, 40);
 	var uname=localStorage.getItem("uname");
 	var name = uname;
