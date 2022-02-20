@@ -15,7 +15,9 @@ function draw(time) {
 	//ctx.fillText("X: " + px + " Y: " + py, 10, 40);
 	var uname=localStorage.getItem("uname");
 	var name = uname;
-	ctx.fillText(name, 20, 200);
+	var xLoc=localStorage.getItem("xLoc");
+	var yLoc=localStorage.getItem("yLoc");
+	ctx.fillText(name, xLoc, yLoc);
 		
 	requestAnimationFrame(draw);
 	}
