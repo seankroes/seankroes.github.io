@@ -2,6 +2,7 @@ var client = {
   socket: null,
   init: function(link) {
     client.socket = io.connect(link, {secure: true, rejectUnauthorized: false});
+
 	client.socket.on("playerMovement", function(data) {
 
 		
@@ -9,21 +10,22 @@ var client = {
 		py = data.posY;
 		
 
-	/*canvas = document.getElementById('canvas');
+	canvas = document.getElementById('canvas');
 	ctx = canvas.getContext('2d');
 	
 	requestAnimationFrame(drawXY);
-
 	
 	function drawXY(time) {
 		
-		ctx.fillStyle = "#000";
+		ctx.fillStyle = "#fff";
 		ctx.font = "normal 10pt sans-serif";
-		ctx.fillText("X: " + px, 10, 40);
-		ctx.fillText("Y: " + py, 10, 60);
+		ctx.fillText("X: " + px, 1080, 40);
+		ctx.fillText("Y: " + py, 1080, 60);
+		//ctx.fillText(client.socket.id, players[data.id].pos.x, players[data.id].pos.y);
+		ctx.fillText();
 			
 		requestAnimationFrame(drawXY);
-		}*/
+		}
 		
 		//console.log(data);
 		//noLoop();
