@@ -10,7 +10,7 @@ var client = {
 		py = data.posY;
 		
 
-	canvas = document.getElementById('canvas');
+	/*canvas = document.getElementById('canvas');
 	ctx = canvas.getContext('2d');
 	
 	requestAnimationFrame(drawXY);
@@ -21,11 +21,11 @@ var client = {
 		ctx.font = "normal 10pt sans-serif";
 		ctx.fillText("X: " + px, 1080, 40);
 		ctx.fillText("Y: " + py, 1080, 60);
-		//ctx.fillText(client.socket.id, players[data.id].pos.x, players[data.id].pos.y);
+		ctx.fillText(client.socket.id, players[data.id].pos.x, players[data.id].pos.y);
 		ctx.fillText();
 			
 		requestAnimationFrame(drawXY);
-		}
+		}*/
 		
 		//console.log(data);
 		//noLoop();
