@@ -160,8 +160,8 @@ Certificate Microsoft Office Excel 2013</p>
   <div id="chat-wrapper" style="margin-top:0px;display:none;">  
     <iframe scrolling="no" style="position:absolute; height: 72%; width: 89%; border: none; overflow: hidden;" src="OnlineGame/public/index.html"></iframe>
     <div id="chat-text" style="position:absolute;margin:8px;width:500px;height:100px;overflow-y:scroll">
-      <div style="font-size:18px;">Online Multiplayer Test v0.1</div>
-      <div style="font-size:14px;">type /help for info</div>
+      <div style="font-size:18px; color:#fff;">Online Multiplayer Test v0.1</div>
+      <div style="font-size:14px; color:#fff;">type /help for info</div>
       <hr>
         <div id="chat-output">
           <!--chat text goes here-->
@@ -222,7 +222,7 @@ Certificate Microsoft Office Excel 2013</p>
   });
 
   socket.on('addToChat',function(data){
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + data + '</div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + data + '</div>';
     //Set chat to bottom on message received
     chatText.scrollTop = chatText.scrollHeight;
   });
@@ -238,13 +238,13 @@ Certificate Microsoft Office Excel 2013</p>
 
   //Retreive from server Coin flip
   socket.on('sendCoin',function(coinValue,username) {
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>flipped the coin and its... ' + coinValue + '</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ': <b>flipped the coin and its... ' + coinValue + '</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
   //Retreive from server Dice
   socket.on('sendDice',function(diceValue,username) {
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>rolled the dice and its... ' + diceValue + '</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ': <b>rolled the dice and its... ' + diceValue + '</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
@@ -253,7 +253,7 @@ Certificate Microsoft Office Excel 2013</p>
   socket.on('sendTime',function(username) {
     //get time
     var time = new Date().toLocaleString();
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>its ' + time + '</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ': <b>its ' + time + '</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
@@ -271,47 +271,47 @@ Certificate Microsoft Office Excel 2013</p>
         return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
       }
 
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>the server has been up for ' + format(uptime) + ' minutes.</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ': <b>the server has been up for ' + format(uptime) + ' minutes.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
   //Retreive from server Clear chat
   socket.on('sendClear',function(username) {
     chatOutput.innerHTML = "";
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ': <b>cleared the chat.</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ': <b>cleared the chat.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
   socket.on('sendHelp',function(username) {
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ": asked for <b>HELP</b>" + '</div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ": asked for <b>HELP</b>" + '</div>';
     chatOutput.innerHTML += '<hr id="chat-message">';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><h3>User commands:</h3></p> </div>';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><b>@name '+'message'+'</b> - send a private message to a user.</p> </div>';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/time</b> - local time.</p> </div>';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/uptime</b> - server uptime.</p> </div>';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/flip /coin</b> - flip a coin.</p> </div>';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/roll /dice</b> - roll the dice.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><h3>User commands:</h3></p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><b>@name '+'message'+'</b> - send a private message to a user.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><b>/time</b> - local time.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><b>/uptime</b> - server uptime.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><b>/flip /coin</b> - flip a coin.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><b>/roll /dice</b> - roll the dice.</p> </div>';
     chatOutput.innerHTML += '<hr id="chat-message">';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><h3>Admin commands:</h3></p> </div>';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/clear /cls /empty</b> - clear the chat.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><h3>Admin commands:</h3></p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><b>/clear /cls /empty</b> - clear the chat.</p> </div>';
    /* chatOutput.innerHTML += '<div id="chat-message"> <p><b>!kick username</b> - kick a user from the chat session.</p> </div>';*/
    /* chatOutput.innerHTML += '<div id="chat-message"> <p><b>/ban</b> - ban a user from the chat session.</p> </div>';*/
-    chatOutput.innerHTML += '<div id="chat-message"> <p><b>/shutdown /exit /quit /q</b> - shutdown the server.</p> </div>';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><h3>Movement controls:</h3></p> </div>';
-    chatOutput.innerHTML += '<div id="chat-message"> <p><h3>Use the WSAD or arrow keys to move around.</h3></p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><b>/shutdown /exit /quit /q</b> - shutdown the server.</p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><h3>Movement controls:</h3></p> </div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <p><h3>Use the WSAD or arrow keys to move around.</h3></p> </div>';
     chatOutput.innerHTML += '<hr id="chat-message">';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
   //Retreive from server user kick
   socket.on('sendKick',function(data,username) {
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>' + data.username + ' has been kicked from the chat session.</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ' <b>' + data.username + ' has been kicked from the chat session.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
   //Retreive from server user ban
   socket.on('sendBan',function(username) {
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has been banned from the chat session.</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ' <b>has been banned from the chat session.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
@@ -319,20 +319,20 @@ Certificate Microsoft Office Excel 2013</p>
   socket.on('sendConnect',function(username) {
     //var uname = username;
     /*localStorage.setItem("uname",uname);*/
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has joined the game.</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ' <b>has joined the game.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
   //Retreive from server User left
   socket.on('sendDisconnect',function(username) {
     //localStorage.removeItem(uname);
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>has left the game.</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ' <b>has left the game.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
   //Retreive from server Shutdown
   socket.on('sendShutdown',function(username) {
-    chatOutput.innerHTML += '<div id="chat-message"> <b>[user]</b> ' + username + ' <b>is shutting down the server.</b></div>';
+    chatOutput.innerHTML += '<div id="chat-message" style="color:#fff;"> <b>[user]</b> ' + username + ' <b>is shutting down the server.</b></div>';
     chatText.scrollTop = chatText.scrollHeight;
   });
 
