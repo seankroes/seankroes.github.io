@@ -1,0 +1,47 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul {
+list-style-type: none;
+}
+
+a:visited {
+
+}
+
+a:link {
+
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+canvas {
+  background-color: lightgray;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  
+}
