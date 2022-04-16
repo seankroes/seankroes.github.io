@@ -13,7 +13,7 @@ var RightBtn;
 //End
 
 function startGame() {
-    Background = new component(656, 270, "img/background.jpg", 0, 0, "image");
+    Background = new component(656, 270, "./img/background.jpg", 0, 0, "image");
 
     Player = new component(30, 30, "./img/ball.png", 200, 75, "image");
 
