@@ -15,15 +15,15 @@ var RightBtn;
 function startGame() {
     Background = new component(656, 270, "img/background.jpg", 0, 0, "image");
 
-    Player = new component(30, 30, "img/ball.png", 200, 75, "image");
+    Player = new component(30, 30, "./img/ball.png", 200, 75, "image");
 
     Obstacle = new component(10,100, "red", 300, 170);
 
   //Mobile buttons
     UpBtn = new component(0, 0, "gray", 50, 160);    
     DownBtn = new component(0, 0, "gray", 50, 220);    
-    LeftBtn = new component(30, 30, "img/button-left.png", 20, 200, "image");    
-    RightBtn = new component(30, 30, "img/button-right.png", 90, 200, "image"); 
+    LeftBtn = new component(30, 30, "./img/button-left.png", 20, 200, "image");    
+    RightBtn = new component(30, 30, "./img/button-right.png", 90, 200, "image"); 
     //End
     myGameArea.start();
 }
