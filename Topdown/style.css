@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: darkgray;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas1 {
+  width: 100vw;//800;
+  height: 100vh;//500;
+  border: 4px solid black;
+  background: darkgreen;
+}
