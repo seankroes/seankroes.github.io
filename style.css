@@ -417,7 +417,7 @@ outline: 0;
 
 /*---------------------Style----------------------*/
 #bg {
-	background: url("images/rain.jpg");
+	background: url("img/rain.jpg");
 	background-size: cover;
 	position: absolute;
 	left: 0;
