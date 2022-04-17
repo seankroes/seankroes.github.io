@@ -10,7 +10,7 @@ function swapStyleSheet(){
 	    
 	    
 	//stop rain
-	    var el = 0;
+	    removeEventListener("load");
     } else {
         //pagestyle.setAttribute('href', 'style-theme-default.css');
         pagestyle.setAttribute('href', 'style-theme-dark.css');
