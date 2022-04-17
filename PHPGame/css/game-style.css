@@ -1,0 +1,55 @@
+/*Game stylesheet*/
+
+/*Health progress bar*/
+.progress-health[value]::-webkit-progress-bar {
+    background-color: #FF0000;
+}
+
+.progress-health[value]::-webkit-progress-value {
+    background-color: green;
+}
+
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/*Rank progress bar*/
+.progress-rank[value]::-webkit-progress-bar {
+     background-color: darkgray;
+ }
+
+.progress-rank[value]::-webkit-progress-value {
+    background-color: #3A88FD;
+}
+
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+/*Show percentage of progress bar*/
+progress {
+    border: none;
+    -webkit-appearance: none;
+    text-align: center;
+    position: relative;
+	width: 100%;
+}
+progress:before {
+    content: attr(value)'%';
+    vertical-align: 0;
+
+    /*Position text over the progress bar */
+    position:absolute;
+    left:0;
+    right:0;
+    color:#fff;
+}
+
+strike {
+	color: red;
+}

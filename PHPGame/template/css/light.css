@@ -1,0 +1,125 @@
+/*STYLESHEET*/
+
+body {
+		margin:0px;
+		padding:0px;
+		font-family: 'Comfortaa', cursive;
+		text-align:center;
+		background:white;
+}
+/*
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="range"], input[type="date"], select[type="text"], textarea {
+		outline:none;
+		padding:10px;
+		display:block;
+		width:300px;
+		border-radius:3px;
+		border:1.25px solid #eee;
+		margin:20px auto;
+}
+
+input[type="submit"] {
+	padding:10px;
+	color:#fff;
+	background:#0098cb;
+	width:320px;
+	margin:20px auto;
+	margin-top:0px;
+	border:0px;
+	border-radius:3px;
+	cursor:pointer;
+}
+
+input[type="submit"]:hover {
+	background:#00b8eb	
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color:#0098cb;;
+}
+
+.header {
+border-bottom:1px solid #cccccc;
+padding:10px 0px;
+text-align:center;
+background-color:#0098cb;
+}
+
+.header a {
+color:white;
+text-decoration:none;
+font-family: 'Heebo', sans-serif;
+text-align:center;
+font-size:17px;
+}
+
+.antispam { 
+display:none;
+}
+
+.btn {
+color:#333;
+text-decoration:underline;	
+}
+
+.links {
+color:#333;	
+}
+
+.hidden {
+display:none;	
+}
+
+/*Profile page 
+.profile {
+float:left;
+margin-left:250px;
+}
+
+/*pointer for underlined links (follow button)
+
+u {
+color:blue;	
+}
+
+u:hover {
+ cursor:pointer;
+ color:darkblue;
+}
+
+#footer {
+   text-align: center;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:18px;
+   width:100%;
+   background:#0098cb;
+   color:white;
+}*/
