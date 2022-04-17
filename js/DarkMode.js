@@ -7,6 +7,10 @@ function swapStyleSheet(){
         //pagestyle.setAttribute('href', 'style-theme-dark.css');
         pagestyle.setAttribute('href', 'style-theme-default.css');
         mode = "dark";
+	    
+	    
+	//stop rain
+	    var el = 0;
     } else {
         //pagestyle.setAttribute('href', 'style-theme-default.css');
         pagestyle.setAttribute('href', 'style-theme-dark.css');
