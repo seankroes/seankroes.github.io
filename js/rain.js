@@ -2,7 +2,7 @@
 
 window.addEventListener("load", function() {
 	// create rain vars
-	var el = document.createElement("div");
+	var el = document.createElement("main");
 	document.getElementById("load").appendChild(el);
 	var frames, duplicate, x, y; // create some vars
 	duplicate = document.getElementById("load").innerHTML;
